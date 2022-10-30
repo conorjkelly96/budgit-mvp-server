@@ -2,14 +2,9 @@ const { model, Schema } = require("mongoose");
 
 const bcrypt = require("bcrypt");
 
-const { validateEmail } = require("../utils");
+const { validateEmail } = require("../utils/index");
 
-const studentSchema = {
-  username: {
-    type: String,
-    required: true,
-    maxLength: 50,
-  },
+const userSchema = {
   firstName: {
     type: String,
     required: true,
@@ -20,12 +15,13 @@ const studentSchema = {
     required: true,
     maxLength: 50,
   },
-  profileImageUrl: {
+  username: {
     type: String,
-    default:
-      "https://qph.fs.quoracdn.net/main-qimg-cf89e8e6daa9dabc8174c303e4d53d3a",
+    required: true,
+    maxLength: 50,
   },
-  email: {
+
+  _email: {
     type: String,
     trim: true,
     lowercase: true,
@@ -36,6 +32,12 @@ const studentSchema = {
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       "Please fill a valid email address",
     ],
+  },
+  get email() {
+    return this._email;
+  },
+  set email(value) {
+    this._email = value;
   },
 
   password: {
@@ -48,67 +50,9 @@ const studentSchema = {
       "Please enter a password with at least 8 characters, including at least 1 number, 1 uppercase, 1 lowercase, and 1 special character.",
     ],
   },
-
-  bio: {
-    type: String,
-    minLength: 1,
-    maxLength: 2000,
-  },
-  interests: [
-    {
-      type: String,
-      enum: [
-        "Travelling",
-        "Exercise",
-        "Movies",
-        "Dancing",
-        "Cooking",
-        "Outdoors",
-        "Politics",
-        "Pets",
-      ],
-    },
-  ],
-  university: {
-    type: Schema.Types.ObjectId,
-    ref: "University",
-    required: true,
-  },
-  college: {
-    type: String,
-    required: true,
-  },
-
-  sellerRating: {
-    type: Number,
-    default: 0,
-  },
-  friends: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Student",
-      required: false,
-    },
-  ],
-
-  savedJobs: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Job",
-      required: false,
-    },
-  ],
-
-  savedItems: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Item",
-      required: false,
-    },
-  ],
 };
 
-const schema = new Schema(studentSchema, {
+const schema = new Schema(userSchema, {
   toJSON: {
     getters: true,
   },
@@ -127,6 +71,6 @@ schema.methods.checkPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const Student = model("Student", schema);
+const User = model("User", schema);
 
-module.exports = Student;
+module.exports = User;
