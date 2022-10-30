@@ -1,8 +1,6 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-  scalar Date
-
   type User {
     id: ID!
     firstName: String!
@@ -29,14 +27,13 @@ const typeDefs = gql`
     Enjoymentfund: Float!
   }
   
-  # QUERIES
-  type Query {
+  // # QUERIES
+  // type Query {
+  // }
 
-  }
-  # MUTATIONS
-  type Mutation {
-    
-  }
+  // # MUTATIONS
+  // type Mutation {
+  // }
 `;
 
 module.exports = typeDefs;

@@ -21,6 +21,7 @@
   "homepage": "https://github.com/conorjkelly96/budgit-mvp-server#readme",
   "dependencies": {
     "apollo-server": "^3.10.3",
+    "apollo-server-express": "^3.10.3",
     "bcrypt": "^5.1.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
