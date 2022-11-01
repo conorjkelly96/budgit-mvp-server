@@ -26,14 +26,15 @@ const typeDefs = gql`
     Savings: Float!
     Enjoymentfund: Float!
   }
-  
-  // # QUERIES
-  // type Query {
-  // }
 
-  // # MUTATIONS
-  // type Mutation {
-  // }
+  type Query {}
+  type Mutation {}
 `;
+
+// ** to add   # QUERIES
+//
+
+// # MUTATIONS
+//
 
 module.exports = typeDefs;
