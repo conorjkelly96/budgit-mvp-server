@@ -2,8 +2,6 @@ const { model, Schema } = require("mongoose");
 
 const bcrypt = require("bcrypt");
 
-const { validateEmail } = require("../utils/index");
-
 const userSchema = {
   firstName: {
     type: String,
@@ -20,7 +18,8 @@ const userSchema = {
     required: true,
     maxLength: 50,
   },
-  _email: {
+
+  email: {
     type: String,
     trim: true,
     lowercase: true,
@@ -31,12 +30,6 @@ const userSchema = {
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       "Please fill a valid email address",
     ],
-  },
-  get email() {
-    return this._email;
-  },
-  set email(value) {
-    this._email = value;
   },
 
   password: {
