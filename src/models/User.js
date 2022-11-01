@@ -16,6 +16,7 @@ const userSchema = {
   username: {
     type: String,
     required: true,
+    unique: true,
     maxLength: 50,
   },
 
@@ -47,6 +48,7 @@ const userSchema = {
 const schema = new Schema(userSchema, {
   toJSON: {
     getters: true,
+    virtuals: true,
   },
   id: true,
 });

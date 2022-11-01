@@ -4,8 +4,8 @@ const { User } = require("../../models");
 
 const signup = async (_, { input }) => {
   try {
+    console.log(input);
     const user = await User.create(input);
-    console.log(user);
 
     return { success: true, user };
   } catch (error) {
