@@ -27,14 +27,26 @@ const typeDefs = gql`
     Enjoymentfund: Float!
   }
 
-  type Query {}
-  type Mutation {}
+  type Query {
+    getAllUsers: [User]
+  }
+
+  input SignupUserInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    password: String!
+  }
+
+  type SignupUserSuccess {
+    success: Boolean!
+    user: User
+  }
+
+  type Mutation {
+    signupUser(input: SignupUserInput!): SignupUserSuccess!
+  }
 `;
-
-// ** to add   # QUERIES
-//
-
-// # MUTATIONS
-//
 
 module.exports = typeDefs;

@@ -20,7 +20,6 @@ const userSchema = {
     required: true,
     maxLength: 50,
   },
-
   _email: {
     type: String,
     trim: true,
