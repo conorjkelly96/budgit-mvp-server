@@ -5,7 +5,7 @@ const { signToken } = require("../../utils");
 
 const loginUser = async (_, { input }, context) => {
   try {
-    const user = await User.findOne({ email: input.email });
+    const user = await User.findOne({ username: input.username });
 
     if (!user) {
       console.log("[ERROR]: Failed to login | User does not exist");

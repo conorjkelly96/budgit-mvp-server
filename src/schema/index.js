@@ -39,13 +39,24 @@ const typeDefs = gql`
     password: String!
   }
 
+  input LoginUserInput {
+    username: String!
+    password: String!
+  }
+
   type SignupUserSuccess {
     success: Boolean!
     user: User
   }
 
+  type UserAuth {
+    token: ID!
+    user: User!
+  }
+
   type Mutation {
     signupUser(input: SignupUserInput!): SignupUserSuccess!
+    loginUser(input: LoginUserInput!): UserAuth!
   }
 `;
 
