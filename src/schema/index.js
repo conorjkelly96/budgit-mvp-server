@@ -51,7 +51,6 @@ const typeDefs = gql`
 
   type UserAuth {
     token: ID!
-    user: User!
   }
 
   type Mutation {

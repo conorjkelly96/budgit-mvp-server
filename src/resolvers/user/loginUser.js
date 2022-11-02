@@ -5,17 +5,14 @@ const { signToken } = require("../../utils");
 
 const loginUser = async (_, { input }, context) => {
   try {
-    console.log("input", input);
-
     const user = await User.findOne({ email: input.email });
-
-    console.log("user", user);
 
     if (!user) {
       console.log("[ERROR]: Failed to login | User does not exist");
       throw new AuthenticationError("Failed to login");
     }
 
+    console.log(input.password);
     const isValidPassword = await user.checkPassword(input.password);
 
     if (!isValidPassword) {
