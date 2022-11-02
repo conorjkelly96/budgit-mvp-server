@@ -5,7 +5,11 @@ const { signToken } = require("../../utils");
 
 const loginUser = async (_, { input }, context) => {
   try {
-    const user = await User.findOne({ username: input.username });
+    console.log("input", input);
+
+    const user = await User.findOne({ email: input.email });
+
+    console.log("user", user);
 
     if (!user) {
       console.log("[ERROR]: Failed to login | User does not exist");
@@ -21,14 +25,6 @@ const loginUser = async (_, { input }, context) => {
 
     return {
       token: signToken(user),
-      user: {
-        id: user.id,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-        username: user.username,
-        type: "user",
-      },
     };
   } catch (error) {
     console.log(`[ERROR]: Failed to login | ${error.message}`);

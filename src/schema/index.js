@@ -40,7 +40,7 @@ const typeDefs = gql`
   }
 
   input LoginUserInput {
-    username: String!
+    email: String!
     password: String!
   }
 
