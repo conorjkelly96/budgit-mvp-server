@@ -12,7 +12,6 @@ const loginUser = async (_, { input }, context) => {
       throw new AuthenticationError("Failed to login");
     }
 
-    console.log(input.password);
     const isValidPassword = await user.checkPassword(input.password);
 
     if (!isValidPassword) {
