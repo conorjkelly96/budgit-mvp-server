@@ -13,18 +13,18 @@ const typeDefs = gql`
   type Budget {
     id: ID
     name: String!
-    Salary: Float!
-    Other: Float!
-    Rentmortgage: Float!
-    Gym: Float!
-    Groceries: Float!
-    Housebills: Float!
-    Creditcard: Float!
-    Phone: Float!
-    Subscriptions: Float!
-    Holidaycost: Float!
-    Savings: Float!
-    Enjoymentfund: Float!
+    salary: Float!
+    other: Float!
+    rentmortgage: Float!
+    gym: Float!
+    groceries: Float!
+    housebills: Float!
+    creditcard: Float!
+    phone: Float!
+    subscriptions: Float!
+    holidaycost: Float!
+    savings: Float!
+    enjoymentfund: Float!
   }
 
   type Query {
@@ -37,6 +37,22 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
+  }
+
+  input CreateBudgetInput {
+    name: String!
+    salary: Float!
+    other: Float!
+    rentmortgage: Float!
+    gym: Float!
+    groceries: Float!
+    housebills: Float!
+    creditcard: Float!
+    phone: Float!
+    subscriptions: Float!
+    holidaycost: Float!
+    savings: Float!
+    enjoymentfund: Float!
   }
 
   input LoginUserInput {
