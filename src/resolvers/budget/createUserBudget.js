@@ -4,7 +4,7 @@ const { Budget } = require("../../models");
 
 const { notAuthorized } = require("../../utils/errorMessage");
 
-const createItem = async (_, { input }, { user }) => {
+const createUserBudget = async (_, { input }, { user }) => {
   try {
     if (user) {
       const user = user.id;
@@ -21,4 +21,4 @@ const createItem = async (_, { input }, { user }) => {
   }
 };
 
-module.exports = createItem;
+module.exports = createUserBudget;

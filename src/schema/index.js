@@ -55,6 +55,11 @@ const typeDefs = gql`
     enjoymentfund: Float!
   }
 
+  type CreateBudgetSuccess {
+    success: Boolean!
+    budget: Budget
+  }
+
   input LoginUserInput {
     email: String!
     password: String!
@@ -72,6 +77,7 @@ const typeDefs = gql`
   type Mutation {
     signupUser(input: SignupUserInput!): SignupUserSuccess!
     loginUser(input: LoginUserInput!): UserAuth!
+    createUserBudget(input: CreateBudgetInput!): CreateBudgetSuccess!
   }
 `;
 

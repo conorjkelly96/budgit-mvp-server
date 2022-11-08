@@ -2,6 +2,7 @@
 const signupUser = require("./user/signupUser");
 const getAllUsers = require("./user/getAllUsers");
 const loginUser = require("./user/loginUser");
+const createUserBudget = require("./budget/createUserBudget");
 
 const resolvers = {
   Query: {
@@ -11,6 +12,7 @@ const resolvers = {
   Mutation: {
     signupUser,
     loginUser,
+    createUserBudget,
   },
 };
 
