@@ -1,0 +1,28 @@
+mutation Mutation($input: CreateBudgetInput!) {
+  createUserBudget(input: $input) {
+    budget {
+      name
+    }
+  }
+}
+
+{
+  "input": {
+    "name": "Tutsie",
+    "salary": 0,
+    "other": 0,
+    "rentmortgage": 0,
+    "gym": 0,
+    "groceries": 0,
+    "housebills": 0,
+    "creditcard": 0,
+    "phone": 0,
+    "subscriptions": 0,
+    "holidaycost": 0,
+    "savings": 0,
+    "enjoymentfund": 0,
+
+  }
+}
+
+yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImZpcnN0TmFtZSI6IkNvbm9yIiwibGFzdE5hbWUiOiJLZWxseSIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidXNlcm5hbWUiOiJ1c2VybmFtZSIsImlkIjoiNjM2MmQwMTBkZGJjNGZiMmNhYTA0YmZlIn0sImlhdCI6MTY2NzkzNjQ2NiwiZXhwIjoxNjY3OTQzNjY2fQ.5-gG570-IJWTJ6Lk_NrFy3QWMm9gRNTaQprsf_PvjQo
