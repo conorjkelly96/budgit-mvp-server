@@ -12,6 +12,7 @@ const typeDefs = gql`
 
   type Budget {
     id: ID
+    user: User
     name: String!
     salary: Float!
     other: Float!
@@ -41,7 +42,6 @@ const typeDefs = gql`
 
   input CreateBudgetInput {
     name: String!
-    user: User!
     salary: Float!
     other: Float!
     rentmortgage: Float!

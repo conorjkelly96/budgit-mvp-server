@@ -8,13 +8,10 @@ const createUserBudget = async (_, { input }, { user }) => {
   try {
     if (user) {
       const userId = user.id;
-      console.log(userId);
 
-      const newBudget = await Budget.create({ ...input, userId });
-      console.log(newBudget);
+      const newBudget = await Budget.create({ ...input, user: userId });
 
-      const budget = newBudget.populate("user");
-      console.log(budget);
+      const budget = await newBudget.populate("user");
 
       return budget;
     } else {
