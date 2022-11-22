@@ -1,28 +1,7 @@
-mutation Mutation($input: CreateBudgetInput!) {
-  createUserBudget(input: $input) {
-    budget {
-      name
+{
+  "data": {
+    "loginUser": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImZpcnN0TmFtZSI6ImNvbm9yIiwibGFzdE5hbWUiOiJrZWxseSIsImVtYWlsIjoiY29ub3JAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ1c2VybmFtZTEyMyIsImlkIjoiNjM3Y2E1NTMxYWJjY2EzYTQwYTBjZGYwIn0sImlhdCI6MTY2OTEzNDA5OCwiZXhwIjoxNjY5MTQxMjk4fQ.SMnZYwb47AzVkjPGjgxt9pxy4DvxAlugviqyEMekMlc"
     }
   }
 }
-
-{
-  "input": {
-    "name": "Tutsie",
-    "salary": 0,
-    "other": 0,
-    "rentmortgage": 0,
-    "gym": 0,
-    "groceries": 0,
-    "housebills": 0,
-    "creditcard": 0,
-    "phone": 0,
-    "subscriptions": 0,
-    "holidaycost": 0,
-    "savings": 0,
-    "enjoymentfund": 0,
-
-  }
-}
-
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImZpcnN0TmFtZSI6ImNvbm9yIiwibGFzdE5hbWUiOiJrZWxseSIsImVtYWlsIjoiY29ub3JAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ1c2VybmFtZTEyMyIsImlkIjoiNjM3Y2E1NTMxYWJjY2EzYTQwYTBjZGYwIn0sImlhdCI6MTY2OTExMzI5NywiZXhwIjoxNjY5MTIwNDk3fQ.yXN_w1Xh8vvGCj57z6alKGMbMeiElWrnOIWgvbmoGmA"

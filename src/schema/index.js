@@ -78,6 +78,7 @@ const typeDefs = gql`
     signupUser(input: SignupUserInput!): SignupUserSuccess!
     loginUser(input: LoginUserInput!): UserAuth!
     createUserBudget(input: CreateBudgetInput!): CreateBudgetSuccess!
+    deleteUserBudget(budgetId: String!): Budget
   }
 `;
 
