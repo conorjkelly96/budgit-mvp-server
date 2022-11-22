@@ -58,7 +58,6 @@ const typeDefs = gql`
 
   type CreateBudgetSuccess {
     success: Boolean!
-    budget: Budget
   }
 
   input LoginUserInput {
