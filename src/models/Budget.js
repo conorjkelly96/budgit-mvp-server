@@ -5,6 +5,11 @@ const budgetSchema = {
     type: String,
     required: true,
   },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
   salary: {
     type: Number,
     required: true,

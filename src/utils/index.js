@@ -23,7 +23,6 @@ const authMiddleware = ({ req }) => {
   }
 
   try {
-    console.log(expiration);
     const { data } = jwt.verify(token, secret, { maxAge: expiration });
     req.user = data;
   } catch {
