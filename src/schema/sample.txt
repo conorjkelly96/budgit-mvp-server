@@ -1,7 +1,1 @@
-{
-  "data": {
-    "loginUser": {
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImZpcnN0TmFtZSI6ImNvbm9yIiwibGFzdE5hbWUiOiJrZWxseSIsImVtYWlsIjoiY29ub3JAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ1c2VybmFtZTEyMyIsImlkIjoiNjM3Y2E1NTMxYWJjY2EzYTQwYTBjZGYwIn0sImlhdCI6MTY2OTEzNDA5OCwiZXhwIjoxNjY5MTQxMjk4fQ.SMnZYwb47AzVkjPGjgxt9pxy4DvxAlugviqyEMekMlc"
-    }
-  }
-}
+yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImZpcnN0TmFtZSI6ImNvbm9yIiwibGFzdE5hbWUiOiJrZWxseSIsImVtYWlsIjoiY29ub3JAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ1c2VybmFtZTEyMyIsImlkIjoiNjM3Y2E1NTMxYWJjY2EzYTQwYTBjZGYwIn0sImlhdCI6MTY2OTIxMTc2OCwiZXhwIjoxNjY5MjE4OTY4fQ.eYlDuUS7x3OeGtnFC2dODWd3RRNNmywKAqSdl7utTVk
