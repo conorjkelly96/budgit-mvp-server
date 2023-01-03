@@ -12,8 +12,10 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
+// initialise connection to the database
 const init = async () => {
   try {
+    // connect to the db in .env file or local host
     await mongoose.connect(
       process.env.MONGODB_URI ||
         `mongodb://localhost:27017/${process.env.DB_NAME}`,
