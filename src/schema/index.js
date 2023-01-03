@@ -57,7 +57,7 @@ const typeDefs = gql`
   }
 
   type CreateBudgetSuccess {
-    success: Boolean!
+    success: Boolean
   }
 
   input LoginUserInput {
@@ -77,7 +77,7 @@ const typeDefs = gql`
   type Mutation {
     signupUser(input: SignupUserInput!): SignupUserSuccess!
     loginUser(input: LoginUserInput!): UserAuth!
-    createUserBudget(input: CreateBudgetInput!): CreateBudgetSuccess!
+    createUserBudget(input: CreateBudgetInput!): Budget!
     deleteUserBudget(budgetId: String!): Budget
   }
 `;
