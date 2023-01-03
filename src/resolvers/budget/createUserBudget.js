@@ -12,7 +12,6 @@ const createUserBudget = async (_, { input }, { user }) => {
       const newBudget = await Budget.create({ ...input, user: userId });
 
       const budget = await newBudget.populate("user");
-      console.log(budget);
       return budget;
     } else {
       console.log(`[ERROR - ELSE]: Failed to create Budget | ${notAuthorized}`);
