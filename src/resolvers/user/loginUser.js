@@ -19,8 +19,10 @@ const loginUser = async (_, { input }, context) => {
       throw new AuthenticationError("Failed to login");
     }
 
+    console.log(user);
     return {
       token: signToken(user),
+      user,
     };
   } catch (error) {
     console.log(`[ERROR]: Failed to login | ${error.message}`);
