@@ -29,6 +29,7 @@ const typeDefs = gql`
 
   type Query {
     getAllUsers: [User]
+    viewMyBudgets: [Item]
   }
 
   input SignupUserInput {
