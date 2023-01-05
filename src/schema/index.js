@@ -14,17 +14,17 @@ const typeDefs = gql`
     id: ID
     user: User!
     name: String!
-    salary: Int!
-    other: Int!
-    rentmortgage: Int!
-    gym: Int!
-    groceries: Int!
-    housebills: Int!
-    creditcard: Int!
-    phone: Int!
-    subscriptions: Int!
-    holidaycost: Int!
-    savings: Int!
+    salary: Float!
+    other: Float!
+    rentmortgage: Float!
+    gym: Float!
+    groceries: Float!
+    housebills: Float!
+    creditcard: Float!
+    phone: Float!
+    subscriptions: Float!
+    holidaycost: Float!
+    savings: Float!
   }
 
   type Query {
@@ -41,17 +41,17 @@ const typeDefs = gql`
 
   input CreateBudgetInput {
     name: String!
-    salary: Int!
-    other: Int!
-    rentmortgage: Int!
-    gym: Int!
-    groceries: Int!
-    housebills: Int!
-    creditcard: Int!
-    phone: Int!
-    subscriptions: Int!
-    holidaycost: Int!
-    savings: Int!
+    salary: Float!
+    other: Float!
+    rentmortgage: Float!
+    gym: Float!
+    groceries: Float!
+    housebills: Float!
+    creditcard: Float!
+    phone: Float!
+    subscriptions: Float!
+    holidaycost: Float!
+    savings: Float!
   }
 
   type CreateBudgetSuccess {

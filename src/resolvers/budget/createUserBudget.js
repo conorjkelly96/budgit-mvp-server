@@ -5,6 +5,7 @@ const { Budget } = require("../../models");
 const { notAuthorized } = require("../../utils/errorMessage");
 
 const createUserBudget = async (_, { input }, { user }) => {
+  console.log(input);
   try {
     if (user) {
       const userId = user.id;
