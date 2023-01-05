@@ -54,10 +54,6 @@ const budgetSchema = {
     type: Number,
     required: true,
   },
-  enjoymentfund: {
-    type: Number,
-    required: true,
-  },
 };
 
 const schema = new Schema(budgetSchema, {
